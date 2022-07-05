@@ -23,6 +23,9 @@ public class ProfitMaximizer {
     }
 
     public static Float getPercentage(Quote quote) {
+        if (quote.getRegularMarketPrice() < 0) {
+            throw new IllegalArgumentException("Negative number is not permitted");
+        }
         return quote.getRegularMarketPrice() * 100 / quote.getFiftyTwoWeekHigh();
     }
 
