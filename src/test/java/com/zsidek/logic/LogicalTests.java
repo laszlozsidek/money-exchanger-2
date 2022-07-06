@@ -31,7 +31,7 @@ class LogicalTests {
         Assertions.assertThat(ProfitMaximizer.getPercentage(quote5)).isEqualTo(101);
         log.info("Boundary percentage calculation 4 is OK");
         Assertions.assertThatExceptionOfType(IllegalArgumentException.class).isThrownBy(() -> ProfitMaximizer.getPercentage(quote6));
-        log.info("Boundary percentage calculation with negative number is OK");
+        log.info("Percentage calculation with negative number is OK");
     }
 
     @Test

@@ -2,10 +2,12 @@
 ## A homework for candidates at Bridge
 
 1. Improvement ideas
-    - Add UI
-    - Simplify used data model (DTO)
+    - Add layer(s) to hide service implementation
+    - Simplify used data model (DTO) - too many unused fields
+    - Introduce a DataProvider component to store and handle test data at one and same place
+    - Handling of input parameters in a dedicated service
 2. Suggestions regarding the testing possibilities
-    - Add tests which handle currencies as input parameters
+    - Add tests which test the handling of currencies as input parameters
 3. Installation and execution
     - Clone repo from public [GitHub](https://github.com/laszlozsidek/money-exchanger-2) repository
     - Open it with an appropriate IDE
