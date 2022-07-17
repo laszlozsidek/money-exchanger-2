@@ -33,15 +33,7 @@ public class FinanceService {
     }
 
     public Response getResponseOfQuoteEndpoint() {
-        return given()
-                .spec(ConfigUtil.createRequestSpec())
-                .queryParams(
-                        REGION, DE,
-                        LANG, EN,
-                        SYMBOLS, String.format(SYMBOLS_WITH_3_CURRENCIES, EUR_HUF, USD_HUF, GBP_HUF)
-                )
-                .when()
-                .get(GET_QUOTE);
+        return getResponseOfQuoteEndpoint(String.format(SYMBOLS_WITH_3_CURRENCIES, EUR_HUF, USD_HUF, GBP_HUF));
     }
 
     public Response getResponseOfQuoteEndpoint(String symbols) {
